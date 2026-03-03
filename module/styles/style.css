@@ -1,0 +1,61 @@
+header {
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    color: rgb(99, 1, 179);
+}
+
+img {
+    width: 200px;
+    height: 100px;
+}
+
+main {
+    background-color: rgb(99, 1, 179);
+    border-radius: 5px;
+    color: white;
+    padding: 30px;
+    margin: 50px 100px 30px 100px;
+}
+
+main ul {
+    padding: 0px 0px 0px 15px;
+}
+
+main ul li {
+    color: yellow
+}
+
+.pre {
+    margin-left: 15px;
+}
+
+.ref{
+    background-color: yellow;
+    border-radius: 3px;
+    color: black;
+    padding: 3px;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color:black;
+    background-color: rgb(246, 198, 27);
+}
+
+footer p {
+    margin: 30px;
+    color: gray;
+}
