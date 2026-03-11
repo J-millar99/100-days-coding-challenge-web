@@ -1,127 +1,170 @@
-#hero {
-  height: 800px;
-  background-image: url("/images/places/ocean.png");
-  background-position: center;
-  background-size: cover;
-}
-
-#hero-content {
-  width: 900px;
-  background-color: rgba(51, 47, 47, 0.8);
-  box-shadow: 2px 4px 8px rgb(68, 67, 67);
-  border-radius: 8px;
-  text-align: center;
-  padding: 50px 0;
-  margin: 0 auto;
-  position: relative;
-  top: 200px;
-}
-
-#hero-content h1 {
-  color: white;
-  text-transform: uppercase;
-  font-size: 50px;
-  font-family: "Raleway", sans-serif;
+body {
+  font-family: "Open Sans", sans-serif;
   margin: 0;
+  background-color: rgb(44, 41, 38);
 }
 
-#hero-content p {
-  color: white;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 300;
-  margin-bottom: 32px;
-}
-
-#hero-content a {
+a {
   text-decoration: none;
-  background-color: rgb(255, 251, 0);
-  padding: 12px 24px;
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: 2px 4px 8px rgb(68, 67, 67);
 }
 
-#hero-content a:hover {
-  background-color: rgb(255, 180, 0);
-}
-
-/*
-    flex container (#destinations)에 display: flex를 설정하면,
-    자식 요소들(.destination)이 자동으로 flex item이 됩니다.
-    그런데 flex item은 기본값으로 flex: 0 1 auto 가 적용돼요. 
-    
-    이게 의미하는 건:
-    0 → 남는 공간이 있어도 늘어나지 않음
-    1 → 공간이 부족하면 줄어들 수 있음
-    auto → 기본 크기는 콘텐츠 크기 기준
-
-    즉, .destination은 기본적으로 이미지 콘텐츠 크기만큼만 차지하고, 창을 늘려도 더 이상 커지지 않아요.
-
-    여기에 flex: 1을 추가하면 flex: 1 1 0 으로 바뀌면서:
-
-    1 → 남는 공간을 균등하게 나눠서 늘어남
-    1 → 공간 부족 시 줄어들 수 있음
-    0 → 기본 크기를 0으로 보고 공간을 균등 분배
-
-    flex: 1은 사실 shorthand(단축 속성) 인데, 값을 하나만 쓰면 아래처럼 해석돼요:
-
-    flex: 1;
-    // 아래와 동일 //
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
-*/
-
-.destination {
-  flex: 1; /* 추가 */
-}
-
-#highlights {
-  padding: 24px;
-  /* 각도 45도, 시작색(왼쪽 아래), 끝나는 색(오른쪽 위) */
-  background: linear-gradient(0deg, rgb(227, 255, 253), rgb(91, 225, 216));
-}
-
-#highlights h2 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 40px;
-  color: rgb(59, 65, 64);
-  margin: 24px 0;
-}
-
-#destinations {
+#main-header {
+  height: 5rem;
   display: flex;
-  width: 90%;
-  margin: auto;
-  margin-bottom: 40px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(29, 26, 24);
+  padding: 0 5%;
 }
 
-.destination {
-  margin: 0 20px;
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(238, 164, 80);
   text-transform: uppercase;
 }
 
-.destination img {
-  height: 200px;
+.menu-btn {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+}
+
+.menu-btn span {
   width: 100%;
-  box-shadow: 2px 4px 8px rgb(68, 67, 67);
-  border-radius: 10px;
+  height: 3px;
+  background-color: white;
+}
+
+#main-header ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#main-header ul li {
+  margin: 0 1rem;
+}
+
+#main-header nav a {
+  color: rgb(185, 131, 31);
+  font-size: 1.25rem;
+}
+
+#main-header nav a:hover {
+  color: rgb(228, 163, 44);
+}
+
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#side-drawer:target {
+  display: block;
+}
+
+#side-drawer header {
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5%;
+}
+
+#side-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#side-darwer li {
+  margin: 1rem 0;
+}
+
+#side-drawer a {
+  color: rgb(253, 239, 213);
+  font-size: 2rem;
+}
+
+main h1 {
+  text-align: center;
+  color: rgb(238, 164, 80);
+  font-size: 3rem;
+}
+
+#latest-products {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+#latest-products ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.food-item {
+  background-color: rgb(228, 206, 182);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.food-item img {
+  height: 15rem;
+  width: 100%;
   object-fit: cover;
 }
 
-.destination p {
+.food-item-content {
+  padding: 1rem;
   text-align: center;
-  font-size: 24px;
-  color: rgb(124, 123, 123);
-  margin: 20px 0;
 }
 
-.destination strong {
-  color: rgb(0, 160, 117);
+.food-item h2 {
+  margin: 0 0 1rem 0;
 }
 
+.btn {
+  background-color: rgb(228, 157, 44);
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn:hover {
+  background-color: rgb(221, 134, 34);
+}
+
+@media (max-width: 48rem) {
+  #main-header nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  #latest-products ul {
+    grid-template-columns: 100%;
+  }
+}
