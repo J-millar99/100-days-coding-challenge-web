@@ -1,170 +1,78 @@
 body {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  background-color: rgb(44, 41, 38);
+  background-color: rgb(31, 30, 30);
+  margin: 8rem;
+  font-family: "Roboto", sans-serif;
 }
 
-a {
-  text-decoration: none;
+h1 {
+  text-align: center;
+  color: white;
 }
 
-#main-header {
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(29, 26, 24);
-  padding: 0 5%;
-}
-
-#logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(238, 164, 80);
-  text-transform: uppercase;
-}
-
-.menu-btn {
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  display: none;
-}
-
-.menu-btn span {
-  width: 100%;
-  height: 3px;
-  background-color: white;
-}
-
-#main-header ul {
+ul {
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
 }
 
-#main-header ul li {
-  margin: 0 1rem;
+form {
+  width: 30rem;
+  margin: 3rem auto;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 6px;
 }
 
-#main-header nav a {
-  color: rgb(185, 131, 31);
-  font-size: 1.25rem;
-}
-
-#main-header nav a:hover {
-  color: rgb(228, 163, 44);
-}
-
-#side-drawer {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(29, 26, 27);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-#side-drawer:target {
+label {
+  margin-bottom: 0.5rem;
   display: block;
 }
 
-#side-drawer header {
-  height: 5rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 5%;
-}
-
-#side-drawer ul {
-  list-style: none;
-  margin: 0;
-  padding: 4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#side-darwer li {
-  margin: 1rem 0;
-}
-
-#side-drawer a {
-  color: rgb(253, 239, 213);
-  font-size: 2rem;
-}
-
-main h1 {
-  text-align: center;
-  color: rgb(238, 164, 80);
-  font-size: 3rem;
-}
-
-#latest-products {
-  width: 80%;
-  margin: 2rem auto;
-}
-
-#latest-products ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-.food-item {
-  background-color: rgb(228, 206, 182);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.food-item img {
-  height: 15rem;
+input,
+textarea,
+select {
   width: 100%;
-  object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font: inherit;
+  border: 1px solid rgb(184, 184, 184);
+  padding: 0.25rem;
+  color: rgb(61, 58, 58);
 }
 
-.food-item-content {
-  padding: 1rem;
-  text-align: center;
+textarea {
+  resize: vertical; 
 }
 
-.food-item h2 {
-  margin: 0 0 1rem 0;
+input:focus,
+textarea:focus {
+  background-color: rgb(219, 190, 253);
+  color: rgb(32, 5, 63);
+  border-color: rgb(32, 5, 63);
 }
 
-.btn {
-  background-color: rgb(228, 157, 44);
+button {
+  display: block;
+  font: inherit;
+  background-color: rgb(32, 5, 63);
   color: white;
+  border: 1px solid rgb(32, 5, 63);
+  padding: 0.5rem 1, 5rem;
   border-radius: 4px;
-  padding: 0.5rem 1.5rem;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background-color: rgb(221, 134, 34);
+button:hover {
+  background-color: rgb(52, 14, 95);
+  border-color: rgb(52, 14, 95);
 }
 
-@media (max-width: 48rem) {
-  #main-header nav {
-    display: none;
-  }
+.form-control-inline {
+  display: flex;
+}
 
-  .menu-btn {
-    display: flex;
-  }
-
-  main h1 {
-    font-size: 1.5rem;
-  }
-
-  #latest-products ul {
-    grid-template-columns: 100%;
-  }
+.form-control-inline input {
+  width: auto;
+  margin: 0.5rem;
 }
