@@ -1,31 +1,5 @@
-let age = 32;
-let userName = "Max";
-let hobbies = ["Sports", "Cooking", "Reading"];
-let job = { title: "Developer", place: "New York", salary: 50000 };
+document.body.children[1].children[0].href = 'https://google.com';
 
-let totalAdultYears;
-
-function calculateAdultYears(userAge) {
-  let result;
-  result = userAge - 18;
-  return result;
-}
-
-totalAdultYears = calculateAdultYears(age);
-console.log(totalAdultYears);
-
-age = 45;
-totalAdultYears = calculateAdultYears(age);
-
-console.log(totalAdultYears);
-
-let person = {
-  name: "Max", // Property
-
-  greet() {
-    // Method
-    console.log("Hello!");
-  },
-};
-
-person.greet();
+// console.dir(document);
+// alert();
+// window.alert();
