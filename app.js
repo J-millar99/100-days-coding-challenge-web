@@ -1,5 +1,18 @@
-document.body.children[1].children[0].href = 'https://google.com';
+let paragraphElement = document.querySelector("p");
 
-// console.dir(document);
-// alert();
-// window.alert();
+function changeParagraphText() {
+  paragraphElement.textContent = "Clicked!";
+}
+
+paragraphElement.addEventListener("click", changeParagraphText);
+
+let inputElement = document.querySelector("input");
+
+function retrieveUserInput(event) {
+//   let enteredText = inputElement.value;
+  let enteredText = event.data;
+  console.log(enteredText);
+//   console.log(event)
+}
+
+inputElement.addEventListener("input", retrieveUserInput);
