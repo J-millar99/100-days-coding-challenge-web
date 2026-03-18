@@ -1,53 +1,39 @@
-// 1) 두 개의 <button> 요소를 선택하고, 각각 다른 변수에 저장하세요.
-//    - 첫 번째 버튼은 "id"를 사용하지 않고 선택하세요.
-//    - 두 번째 버튼은 "id"를 사용하여 선택하세요.
+// Exercise Time!
 
-const firstButton = document.querySelector("button");
-const secondButton = document.getElementById("second-button");
+// 1. Select the <h1> element by "drilling into the DOM" and 
+//    save it in a variable with a name of your choice
 
-// 2) 두 버튼 모두에 "click" 이벤트 리스너를 추가하세요 (각각 다른 함수).
-//    - 클릭된 버튼을 console.dir()로 출력하세요.
-//    - 첫 번째 버튼은 저장된 변수를 사용해서 출력하세요.
-//    - 두 번째 버튼은 저장된 변수를 사용하지 않고 출력하세요.
+let h1Element = document.body.firstElementChild;
+h1Element = document.body.children[0];
 
-// function firstButtonEventListener() {
-//   console.dir(firstButton);
-// }
+console.dir(h1Element);
 
-// function secondButtonEventListener(event) {
-//   console.dir(event.target);
-// }
+// 2. Use the variable from (1) and get access to the "parent"
+//    element of the stored <h1> element (i.e. to the <body> element)
 
-// firstButton.addEventListener("click", firstButtonEventListener);
-// secondButton.addEventListener("click", secondButtonEventListener);
+console.dir(h1Element.parentElement);
 
-// 3) 페이지에 있는 설명 텍스트에서 언급된 <p> 요소들(첫 번째와 세 번째 문단)을 선택하고 저장하세요.
-//    - document를 따라 내려가며(탐색하며) 해당 요소들을 선택하세요.
-//    - DOM 탐색이 어렵다면 "id"를 사용해도 되지만, 가능하면 직접 탐색을 시도해보세요.
+//    BONUS: Try using the variable from (1) to get access to the 
+//    sibling element (i.e. the <p> element next to the <h1> element)
 
-const firstParagraph = document.body.children[2].children[1];
-console.log(firstParagraph);
-const thirdParagraph = document.body.children[2].children[3];
-console.log(thirdParagraph);
+console.dir(h1Element.nextElementSibling);
 
-// 4) (2)에서 만든 함수들을 다음과 같이 수정하세요.
-//    - 첫 번째 버튼은 세 번째 문단(버튼 바로 위의 <p>)을 제거합니다.
-//    - 두 번째 버튼은 첫 번째 문단의 배경색을 파란색으로 변경합니다.
+// 3. Select the <h1> element with getElementById and store in
+//    the same or a new variable (up to you)
 
-function firstButtonEventListener() {
-  thirdParagraph.remove();
-}
+h1Element = document.getElementById('first-title');
 
-function secondButtonEventListener(event) {
-  // firstParagraph.style.backgroundColor = 'blue';
-    firstParagraph.className = "blue-bg"; // 클래스 이름 변경
-//   firstParagraph.classList.add("blue-bg"); // 클래스 추가
-}
+console.dir(h1Element);
 
-firstButton.addEventListener("click", firstButtonEventListener);
-secondButton.addEventListener("click", secondButtonEventListener);
+// 4. Select the second <p> element with querySelector (you might
+//    need to add something in the HTML code, e.g. a class) 
+//    and store it in a new variable with a name of your choice
 
-// 5) (4)를 두 가지 방식으로 구현하세요.
-//    - "inline styles"를 변경하는 방법
-//    - CSS 클래스를 추가하는 방법
-//    참고: 해당 클래스는 styles.css 파일에 먼저 추가해야 합니다.
+let highlightedParagraph = document.querySelector('.highlighted-paragraph');
+
+console.dir(highlightedParagraph);
+
+// 5. BONUS TASK: Try changing the text content of the <p> element
+//    you selected in (4) and set it to any other text of your choice
+
+highlightedParagraph.textContent = 'This was changed by Max!';
