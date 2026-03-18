@@ -4,23 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced JavaScript</title>
-    <script src="demo.js" defer></script>
+    <title>Advanced JavaScript Exercise</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="exercise.js" defer></script>
   </head>
   <body>
-    <form action="">
-      <div class="control">
-        <label for="product-name">Product Name</label>
-        <input
-          type="text"
-          id="product-name"
-          name="product-name"
-          maxlength="60"
-        />
-        <span id="charcount"><span id="remaining-chars">60</span>/60</span>
-      </div>
-      <button>Submit</button>
-    </form>
+    <h1>Advanced JavaScript</h1>
+    <p>Working with the DOM - Exercise</p>
+
+    <section>
+      <h2>Why JavaScript?</h2>
+      <p class="test">
+        JavaScript is a programming language which can be executed by the
+        browser, after the page was loaded.
+      </p>
+      <p>
+        With JavaScript, you, as a developer, can access, read and manipulate
+        the parsed HTML code ("the DOM") to add additional behavior and features
+        to the page.
+      </p>
+      <p>For example, you can make the below button remove this text!</p>
+      <button>Remove Paragraph</button>
+      <p>
+        Or take the next button: It adds a blue background to the first
+        paragraph.
+      </p>
+      <button id="second-button">Add Blue Background Color</button>
+    </section>
   </body>
 </html>
